@@ -1,41 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="public/css/style.css" />
-    <title>Form</title>
-  </head>
 
-  <body>
-    <h1>New User Signup</h1>
-    <form>
-      <input type="text" name="username" placeholder="username" />
-      <p>Username must be and contain 5 - 12 characters</p>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="public/css/style.css">
+		<title>Document</title>
+	</head>
 
-      <input type="text" name="email" placeholder="email" />
-      <p>Email must be a valid address, e.g. me@mydomain.com</p>
+	<body>
+		<div id="formWrapper">
+			<div id="form">
+				<div class="logo">
+					<div class='welcome'>Hello There!</div>
+					<div class='subtitle'>This form validation uses vanilla JS</div>
+				</div>
+				<div class="form-item">
+					<p class="formLabel">Username</p>
+					<input type="text" name="username" id="username" class="form-style" autocomplete="off" />
+					<small>Must be alphnumeric and btw 5 - 12 characters</small>
+				</div>
+				<div class="form-item">
+					<p class="formLabel">Telephone</p>
+					<input type="text" name="telephone" id="telephone" class="form-style" autocomplete="off" />
+					<small>Telephone must be a valid 11 digits telephone number</small>
+				</div>
+				<div class="form-item">
+					<p class="formLabel">Slug</p>
+					<input type="text" name="slug" id="slug" class="form-style" autocomplete="off" />
+					<small>Only lowercase letters, numbers, hyphens btw 8-20</small>
+				</div>
+				<div class="form-item">
+					<p class="formLabel">Email</p>
+					<input type="email" name="email" id="email" class="form-style" autocomplete="off" />
+					<small>Email must be a valid address, e.g. me@mydomain.com</small>
+				</div>
+				<div class="form-item">
+					<p class="formLabel">Password</p>
+					<input type="password" name="password" id="password" class="form-style" />
+					<small>
+						Only alphanumeric password btw 8 - 20 char. allowed
+					</small>
+				</div>
+				<div>
+					<p class="pull-left">
+						<a href="#">
+							<small>Already have an account? login</small>
+						</a>
+					</p>
+					<input type="submit" class="login pull-right" value="Register">
+					<div class="clear-fix"></div>
+				</div>
+			</div>
+		</div>
+		<script src="public/javascript/script.js"></script>
+	</body>
 
-      <input type="password" name="password" placeholder="password" />
-      <p>
-        Password must alphanumeric (@, _ and - are also allowed) and be 8 - 20
-        characters
-      </p>
-
-      <input type="text" name="telephone" placeholder="telephone" />
-      <p>Telephone must be a valid UK telephone number (11 digits)</p>
-
-      <input type="text" name="slug" placeholder="profile slug" />
-      <p>
-        Slug must contain only lowercase letters, numbers and hyphens and be 8 -
-        20 characters
-      </p>
-    </form>
-
-    <script
-      type="text/javascript"
-      src="public/javascript/validation.js"
-    ></script>
-  </body>
 </html>
