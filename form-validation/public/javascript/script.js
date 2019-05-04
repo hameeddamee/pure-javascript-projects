@@ -10,26 +10,27 @@ const patterns = {
 };
 
 inputs.forEach(function(input) {
-	input.addEventListener("keyup", function(e) {
-		validate(e.target, patterns[e.target.attributes.name.value]);
+	input.addEventListener("keyup", function(action) {
+		validate(action.target, patterns[action.target.attributes.name.value]);
 	});
-	input.addEventListener("focus", function(e) {
-		animateLabelUp(e.target);
+	input.addEventListener("focus", function(action) {
+		animateLabelUp(action.target);
 	})
-	input.addEventListener("blur", function(e) {
-		animateLabelDown(e.target);
+	input.addEventListener("blur", function(action) {
+		animateLabelDown(action.target);
 	})
 });
 
 labels.forEach(function(label) {
 	const labelInput = label.parentElement.querySelector(".form-style")
-	label.addEventListener("click", function (e) {
+	label.addEventListener("click", function () {
 		animateLabelUp(labelInput);
 	})
 });
 
 function validate(field, regexPattern) {
 	if (regexPattern.test(field.value)) {
+		field.classList.remove("invalid");
 		field.classList.add("valid");
 	} else {
 		field.classList.add("invalid");
