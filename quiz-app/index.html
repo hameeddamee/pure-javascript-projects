@@ -10,50 +10,21 @@
 	</head>
 
 	<body>
-		<div id="formWrapper">
-			<div id="form">
-				<div class="logo">
-					<div class='welcome'>Hello There!</div>
-					<div class='subtitle'>This form validation uses vanilla JS</div>
-				</div>
-				<div class="form-item">
-					<p class="formLabel">Username</p>
-					<input type="text" name="username" id="username" class="form-style" autocomplete="off" />
-					<small>Must be alphnumeric and btw 5 - 12 characters</small>
-				</div>
-				<div class="form-item">
-					<p class="formLabel">Telephone</p>
-					<input type="text" name="telephone" id="telephone" class="form-style" autocomplete="off" />
-					<small>Telephone must be a valid 11 digits telephone number</small>
-				</div>
-				<div class="form-item">
-					<p class="formLabel">Slug</p>
-					<input type="text" name="slug" id="slug" class="form-style" autocomplete="off" />
-					<small>Only lowercase letters, numbers, hyphens btw 8-20</small>
-				</div>
-				<div class="form-item">
-					<p class="formLabel">Email</p>
-					<input type="email" name="email" id="email" class="form-style" autocomplete="off" />
-					<small>Email must be a valid address, e.g. me@mydomain.com</small>
-				</div>
-				<div class="form-item">
-					<p class="formLabel">Password</p>
-					<input type="password" name="password" id="password" class="form-style" />
-					<small>
-						Only alphanumeric password btw 8 - 20 char. allowed
-					</small>
-				</div>
-				<div>
-					<p class="pull-left">
-						<a href="#">
-							<small>Already have an account? login</small>
-						</a>
-					</p>
-					<button type="submit" class="login pull-right">Register</button>
-					<div class="clear-fix"></div>
-				</div>
+		<section class='dojo'>
+			<div class='quiz-body'>
+			  <header>
+				<div id='timer'>Time: <strong>20</strong></div>
+				<div id='score'>Score: <strong>0</strong></div>
+				<div id='hiScore'>High Score: <strong></strong></div>
+				<h1>Quiz Ninja!</h1>
+			  </header>
+			<div id='question'></div>
+			<div id='response'></div>
+			<div id='result'></div>
+			<div id='info'></div>
+			<button id='start'>Click to Start</button>
 			</div>
-		</div>
+		  </section>
 		<script src="public/javascript/script.js"></script>
 	</body>
 
